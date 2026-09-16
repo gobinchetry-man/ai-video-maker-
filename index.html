@@ -1,1 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
+<body>
+
+    <div class="container">
+
+        <h1>AI Video Maker</h1>
+
+        <p class="subtitle">
+            Create videos from your ideas
+        </p>
+
+        <textarea
+            id="prompt"
+            placeholder="Write your video idea here..."
+        ></textarea>
+
+        <div class="options">
+
+            <select id="ratio">
+                <option value="9:16">9:16 Shorts</option>
+                <option value="16:9">16:9 YouTube</option>
+            </select>
+
+            <select id="duration">
+                <option value="30">30 Seconds</option>
+                <option value="60">60 Seconds</option>
+                <option value="120">2 Minutes</option>
+            </select>
+
+        </div>
+
+        <button onclick="generateVideo()">
+            ✨ Generate Video
+        </button>
+
+        <div id="loading" class="loading">
+            Creating your video...
+        </div>
+
+        <div id="result" class="result"></div>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
