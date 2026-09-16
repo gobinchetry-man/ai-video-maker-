@@ -3,49 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>AI Video Maker</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="app">
 
-        <h1>AI Video Maker</h1>
+        <header class="header">
+            <div class="logo">🎬 AI Video Maker</div>
+            <div class="status">● Online</div>
+        </header>
 
-        <p class="subtitle">
-            Create videos from your ideas
-        </p>
+        <main class="main">
 
-        <textarea
-            id="prompt"
-            placeholder="Write your video idea here..."
-        ></textarea>
+            <div class="hero">
+                <h1>Create AI Videos<br>From Your Ideas</h1>
 
-        <div class="options">
+                <p>
+                    Turn your text into engaging videos with AI.
+                </p>
+            </div>
 
-            <select id="ratio">
-                <option value="9:16">9:16 Shorts</option>
-                <option value="16:9">16:9 YouTube</option>
-            </select>
+            <section class="card">
 
-            <select id="duration">
-                <option value="30">30 Seconds</option>
-                <option value="60">60 Seconds</option>
-                <option value="120">2 Minutes</option>
-            </select>
+                <label>What do you want to create?</label>
 
-        </div>
+                <textarea
+                    id="prompt"
+                    placeholder="Example: A mysterious story about a haunted house in an Indian village..."
+                ></textarea>
 
-        <button onclick="generateVideo()">
-            ✨ Generate Video
-        </button>
+                <div class="grid">
 
-        <div id="loading" class="loading">
-            Creating your video...
-        </div>
+                    <div>
+                        <label>Aspect Ratio</label>
 
-        <div id="result" class="result"></div>
+                        <select id="ratio">
+                            <option value="9:16">📱 9:16 — Shorts / Reels</option>
+                            <option value="16:9">🖥️ 16:9 — YouTube</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label>Duration</label>
+
+                        <select id="duration">
+                            <option value="30">30 Seconds</option>
+                            <option value="60">60 Seconds</option>
+                            <option value="120">2 Minutes</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div>
+                    <label>Video Style</label>
+
+                    <select id="style">
+                        <option value="cinematic">🎬 Cinematic</option>
+                        <option value="animation">🎨 2D Animation</option>
+                        <option value="realistic">📷 Realistic</option>
+                        <option value="documentary">🎥 Documentary</option>
+                    </select>
+                </div>
+
+                <button onclick="generateVideo()" class="generate">
+                    ✨ Generate Video
+                </button>
+
+                <div id="loading" class="loading">
+                    <div class="spinner"></div>
+                    <p>Creating your video...</p>
+                </div>
+
+                <div id="result" class="result"></div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            AI Video Maker • Create. Imagine. Inspire.
+        </footer>
 
     </div>
 
